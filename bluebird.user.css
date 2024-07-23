@@ -1,0 +1,48 @@
+@-moz-document domain("twitter.com", "x.com"){
+        /* ==UserStyle==
+        @name Bluebird
+        @author estroholic
+        @description Reverses X branding on Twitter
+        @version 0.0.0
+        @namespace https://github.com/estroholic/bluebird
+        ==/UserStyle/== */
+  
+        /* Twitter logo */
+        path[d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"]{
+          d:path("M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z");
+          filter: brightness(0) saturate(100%) invert(51%) sepia(29%) saturate(4686%) hue-rotate(180deg) brightness(98%) contrast(91%);
+        }
+
+        /* Birdhouse */
+        path[d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913h6.638c.511 0 .929-.41.929-.913v-7.075h3.008v7.075c0 .502.418.913.929.913h6.639c.51 0 .928-.41.928-.913V7.904c0-.301-.158-.584-.408-.758zM20 20l-4.5.01.011-7.097c0-.502-.418-.913-.928-.913H9.44c-.511 0-.929.41-.929.913L8.5 20H4V8.773l8.011-5.342L20 8.764z"],
+        path[d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913H9.14c.51 0 .929-.41.929-.913v-7.075h3.909v7.075c0 .502.417.913.928.913h6.165c.511 0 .929-.41.929-.913V7.904c0-.301-.158-.584-.408-.758z"]{
+          d:path("M12 9c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm0 6c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2zm0-13.304L.622 8.807l1.06 1.696L3 9.679V19.5C3 20.881 4.119 22 5.5 22h13c1.381 0 2.5-1.119 2.5-2.5V9.679l1.318.824 1.06-1.696L12 1.696zM19 19.5c0 .276-.224.5-.5.5h-13c-.276 0-.5-.224-.5-.5V8.429l7-4.375 7 4.375V19.5z");
+        }
+
+        /* Hide text, ads, new features, etc */
+        aside[aria-label="Subscribe to Premium"],
+        a[aria-label="Grok"],
+        a[aria-label="Communities"],
+        a[aria-label="Verified Orgs"],
+        a[href="/settings/monetization"],
+        a[href="https://ads.x.com/?ref=gl-tw-tw-twitter-ads-rweb"],
+        a[href="/jobs"],
+        a[aria-label="Post"] span,
+        a[aria-label="Premium"] span,
+        button[data-testid="tweetButtonInline"] span,
+        button[data-testid="tweetButton"] span,
+        h1[data-testid="ocfSettingsListPrimaryText"] span,
+        a[href="https://help.twitter.com/forms/account-access/regain-access"] span{
+          display:none!important;
+        }
+
+        /* Misc branding */
+        h1[data-testid="ocfSettingsListPrimaryText"]::after{ content:"Join Twitter today."; }
+        a[href="https://help.twitter.com/forms/account-access/regain-access"]::after{ content:"Contact Twitter Support"; }
+        a[aria-label="Premium"] div div[dir="ltr"]::after{ content:"Twitter Blue"; }
+        a[aria-label="Post"] div::after,
+        button[data-testid="tweetButtonInline"] div::after,
+        button[data-testid="tweetButton"] div::after{
+          content:"Tweet";
+        }
+}
