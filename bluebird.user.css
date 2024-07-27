@@ -3,7 +3,7 @@
         @name Bluebird
         @author estroholic
         @description Reverses X branding on Twitter
-        @version 0.0.1
+        @version 0.0.2
         @namespace https://github.com/estroholic/bluebird
         @license WTFPL
         ==/UserStyle== */
@@ -35,6 +35,9 @@
     
         /* Hide text, ads, new features, etc */
         aside[aria-label="Subscribe to Premium"],
+        aside[aria-label="Subscribe to Premium to write your own longer posts"],
+        aside[aria-label="Subscribe to Premium+ to write your own Articles"],
+        div[data-testid="twitterArticleReadView"] div[aria-live="polite"],
         a[aria-label="Grok"],
         a[aria-label="Communities"],
         a[aria-label="Verified Orgs"],
