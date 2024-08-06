@@ -3,7 +3,7 @@
         @name Bluebird
         @author estroholic
         @description Reverses X branding on Twitter
-        @version 0.0.2
+        @version 0.0.3
         @namespace https://github.com/estroholic/bluebird
         @license WTFPL
         ==/UserStyle== */
@@ -55,6 +55,7 @@
         a[href="/i/premium_sign_up"] span,
         a[href="https://support.x.com/articles/18311"] span,
         div[data-testid="pillLabel"] span,
+        a[data-testid="tweetEngagements"] span,
         path[d="M13.101 4.533L11 2.5 8.899 4.533l-2.895-.41-.505 2.88-2.583 1.37L4.2 11l-1.284 2.627 2.583 1.37.505 2.88 2.895-.41L11 19.5l2.101-2.033 2.895.41.505-2.88 2.583-1.37L17.8 11l1.284-2.627-2.583-1.37-.505-2.88zm-6.868 6.89l3.429 3.428 5.683-6.206-1.347-1.247-4.4 4.795-2.072-2.072z"],
         path[d="M6.233 11.423l3.429 3.428 5.65-6.17.038-.033-.005 1.398-5.683 6.206-3.429-3.429-.003-1.405.005.003z"]{
           display:none!important;
@@ -69,6 +70,7 @@
         a[href="/i/premium_sign_up"] div div div::after{ content:"Twitter Blue"; }
         a[href="https://support.x.com/articles/18311"]::after{ content:"Twitter Rules"; }
         div[data-testid="pillLabel"]::after{ content:"Tweeted"; }
+        a[data-testid="tweetEngagements"] div div::after{ content:"View Tweet engagements"; }
         a[aria-label="Post"] div::after,
         button[data-testid="tweetButtonInline"] div::after,
         button[data-testid="tweetButton"] div::after{
